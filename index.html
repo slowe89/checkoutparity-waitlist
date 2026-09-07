@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CheckoutParity — feed↔PDP↔checkout agreement lab</title>
+  <meta name="description" content="CheckoutParity runs agent-shaped parity checks across feed, structured data, PDP, and checkout session APIs — including parallel load — and hands you the exact surfaces that disagree, before trust scores and oversells do it for you." />
+  <meta name="robots" content="index,follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;650&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="#">Checkout<span>Parity</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#scorecard">Scorecard</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#waitlist">Waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="wrap">
+        <h1>Agents don’t shrug when your feed says in-stock and checkout says sold out.</h1>
+        <p class="sub">CheckoutParity runs agent-shaped parity checks across feed, structured data, PDP, and checkout session APIs — including parallel load — and hands you the exact surfaces that disagree, before trust scores and oversells do it for you.</p>
+        <p class="who">For DTC / Shopify / Merchant Center sellers (and agencies serving them) enabling UCP/ACP / agentic checkout — humans buy so shopping agents succeed.</p>
+        <p class="who-not">Not “add llms.txt / MCP-ify my marketing site.” Orientation files are maps; we test whether purchase surfaces <strong>agree</strong>.</p>
+        <ul class="bullets">
+          <li>
+            <strong>Disagreement map, not another feed checklist</strong>
+            <span>We diff feed ↔ schema ↔ PDP ↔ checkout state under agent-shaped traffic so you see which surface lies, not a PDF of attributes you already know.</span>
+          </li>
+          <li>
+            <strong>Built for UCP/ACP enablement</strong>
+            <span>Price/availability match, <code>native_commerce</code> eligibility, ID mapping, idempotency, and parallel checkout load — the jobs that kill agent purchases when humans would have shrugged.</span>
+          </li>
+          <li>
+            <strong>Fix brief + retest path</strong>
+            <span>Ship pack returns ranked fixes; optional retainer retests when feeds and protocol attributes drift.</span>
+          </li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#scorecard">Get your Parity Blind Spot Score (free)</a>
+          <a class="btn btn-secondary" href="#waitlist">Join the waitlist for a Ship pack</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="wrap">
+        <h2>Soft pricing</h2>
+        <p class="section-lead">Early demand-test ranges — not a cart. Packaging unproven until we see budget distribution.</p>
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Offer</th>
+              <th>Soft range</th>
+              <th>What you get (intent)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ship pack</strong></td>
+              <td>$2,997–$7,997</td>
+              <td>Parity matrix + ranked fix brief + sample agent-traffic load notes</td>
+            </tr>
+            <tr>
+              <td><strong>Retest retainer</strong></td>
+              <td>$797–$1,997/mo</td>
+              <td>Feed drift + protocol attribute churn rechecks</td>
+            </tr>
+            <tr>
+              <td><strong>Eligibility add-on</strong></td>
+              <td>quote</td>
+              <td><code>native_commerce</code>, returns policy, <code>merchant_item_id</code> mapping deep-dive</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="pricing-note">UNPROVEN — demand test. No checkout on this page.</p>
+      </div>
+    </section>
+
+    <section id="scorecard">
+      <div class="wrap">
+        <h2>Parity Blind Spot Scorecard</h2>
+        <p class="section-lead">10 yes/no gates. Yes = 10 points → total 0–100. Self-reported; a paid Ship pack re-runs checks with agent-shaped probes.</p>
+        <div class="scorecard-list" id="gates" aria-label="Ten parity gates"></div>
+        <div class="score-panel" id="score-panel" aria-live="polite">
+          <div class="score-num" id="score-num">—</div>
+          <div class="score-band" id="score-band">Answer the gates to see your band</div>
+          <p class="score-copy" id="score-copy">Each Yes is 10 points. Incomplete answers stay unscored.</p>
+          <p class="score-meta">Bands: 0–39 Critical blind spots · 40–69 Partial parity · 70–89 Ship-risk remains · 90–100 Strong (still retest under load)</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#waitlist" id="share-score-cta">Share your score + answers for a free disagreement brief sketch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="waitlist">
+      <div class="wrap">
+        <div class="form-card">
+          <h3>CheckoutParity waitlist / score follow-up</h3>
+          <p class="form-intro">Required: email + Q1–Q5 + budget. Optional: store URL, feed URL, UCP/ACP status.</p>
+          <form
+            id="priestley-form"
+            action="https://formsubmit.co/thespencerlowe@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="CheckoutParity waitlist / score follow-up" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="source" id="field-source" value="checkoutparity-waitlist" />
+            <input type="hidden" name="score_total" id="field-score-total" value="" />
+            <input type="hidden" name="score_vector" id="field-score-vector" value="" />
+            <input type="hidden" name="submitted_at" id="field-submitted-at" value="" />
+
+            <div class="field">
+              <label for="email">Work email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="you@company.com" />
+            </div>
+
+            <div class="field">
+              <label for="q1">1. What breaks (or nearly breaks) when an agent — or agent-like automation — tries to buy from you today? <span class="req">*</span></label>
+              <textarea id="q1" name="q1_what_breaks" required placeholder="e.g. feed says in-stock / checkout sold out; wrong price in AI answers; session errors under load; we haven’t tried yet…"></textarea>
+            </div>
+
+            <div class="field">
+              <label>2. Which surfaces do you already know disagree — or have you never compared them end-to-end? <span class="req">*</span></label>
+              <div class="checks" id="q2-checks">
+                <label><input type="checkbox" name="q2_surfaces" value="Feed" /> Feed</label>
+                <label><input type="checkbox" name="q2_surfaces" value="Schema / structured data" /> Schema / structured data</label>
+                <label><input type="checkbox" name="q2_surfaces" value="PDP" /> PDP</label>
+                <label><input type="checkbox" name="q2_surfaces" value="Checkout session API" /> Checkout session API</label>
+                <label><input type="checkbox" name="q2_surfaces" value="Merchant Center / UCP attributes" /> Merchant Center / UCP attributes</label>
+                <label><input type="checkbox" name="q2_surfaces" value="We have never diffed them" /> We have never diffed them</label>
+                <label><input type="checkbox" name="q2_surfaces" value="Not sure" /> Not sure</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="q3">3. What have you tried so far (tools, agencies, internal projects), and what still failed? <span class="req">*</span></label>
+              <textarea id="q3" name="q3_tried" required placeholder="feed apps, PIM sync, agency SEO, platform ‘AI commerce’ toggle, nothing yet…"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="q4">4. If agents aborted purchases or quoted wrong price/stock on your catalog last month, what did that cost you — GMV, trust score, oversell, or team hours? <span class="req">*</span></label>
+              <textarea id="q4" name="q4_cost" required placeholder="rough $ or hours is fine; “unknown but scared” is fine"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="q5">5. If we handed you a disagreement map + ranked fix brief in 10 business days, what would “worth it” look like for you? <span class="req">*</span></label>
+              <textarea id="q5" name="q5_worth_it" required placeholder="e.g. pass UCP eligibility, stop oversells, green parallel-load test, agency deliverable for a client…"></textarea>
+            </div>
+
+            <div class="field">
+              <label>What budget band fits a one-time Ship pack (parity matrix + fix brief) in the next 60 days? <span class="req">*</span></label>
+              <div class="radios">
+                <label><input type="radio" name="budget_band" value="Under $500" required /> Under $500</label>
+                <label><input type="radio" name="budget_band" value="$500–$2,000" /> $500–$2,000</label>
+                <label><input type="radio" name="budget_band" value="$2,000–$5,000" /> $2,000–$5,000</label>
+                <label><input type="radio" name="budget_band" value="$5,000–$10,000" /> $5,000–$10,000</label>
+                <label><input type="radio" name="budget_band" value="$10,000+" /> $10,000+</label>
+                <label><input type="radio" name="budget_band" value="Not sure yet" /> Not sure yet</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="store_url">Store URL (optional)</label>
+              <input type="url" id="store_url" name="store_url" placeholder="https://" />
+            </div>
+            <div class="field">
+              <label for="feed_url">Product feed URL (optional)</label>
+              <input type="text" id="feed_url" name="feed_url" placeholder="https://… or “private — email me”" />
+            </div>
+            <div class="field">
+              <label for="ucp_status">UCP / ACP / agentic checkout status (optional)</label>
+              <select id="ucp_status" name="ucp_status">
+                <option value="">—</option>
+                <option>Not started</option>
+                <option>In progress</option>
+                <option>Live in limited SKUs</option>
+                <option>Live</option>
+                <option>Agency managing for a client</option>
+                <option>Prefer not to say</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="retainer">Retainer interest (optional)</label>
+              <select id="retainer" name="retainer_interest">
+                <option value="">—</option>
+                <option>Yes — feed/protocol drift retests</option>
+                <option>Maybe later</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send my score &amp; answers</button>
+              <span class="form-hint">Delivers to thespencerlowe@gmail.com via formsubmit.co (or Formspree if configured).</span>
+            </div>
+            <div class="form-success" id="form-success" role="status">
+              Got it — we’ll reply from thespencerlowe@gmail.com if you’re a fit for a Ship pack or retest.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <div class="wrap">
+        <h2>Build checklist (page)</h2>
+        <ul class="checklist">
+          <li>Hero copy + scorecard widget + Priestley form</li>
+          <li>Soft pricing table; no payment</li>
+          <li>Capture → thespencerlowe@gmail.com</li>
+          <li>Privacy one-liner; no SOLVD branding</li>
+          <li>Meta title / description from prep</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Demand test</strong> — packaging unproven until we see budget distribution. Capture: thespencerlowe@gmail.com.</p>
+      <p class="privacy">We only use your answers to follow up on CheckoutParity interest. No SOLVD branding. Self-reported scorecard; paid Ship pack re-runs checks with agent-shaped probes. Public brand grades (if published later) use the same 10 gates.</p>
+      <p>© <span id="year"></span> CheckoutParity — independent demand test.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
